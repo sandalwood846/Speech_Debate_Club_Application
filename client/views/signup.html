@@ -1,0 +1,129 @@
+<template name="signup">
+  <form id="application-signup" class="signup">
+  <h3 class = "page-header">Evergreen Valley High School Speech and Debate <br> 2015-2016 Official Sign Up Form </h3>
+    <h4 class="page-header">STUDENT INFORMATION</h4>
+    <div class="form-group">
+      <label for="firstName">Student First Name</label>
+      <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+    </div>
+    <div class="form-group">
+      <label for="middleName">Student Middle Name</label>
+      <input type="text" name="middleName" class="form-control" placeholder="Middle Name" >
+    </div>
+    <div class="form-group">
+      <label for="lastName">Student Last Name</label>
+      <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="form-group">
+      <label for="DOB">Student Date of Birth</label>
+      <input type="text" name="DOB" class="form-control" placeholder="05/05/2015" required>
+    </div>
+    <div class="form-group">
+      <label for="studentGrade">Student Grade</label>
+      <input type="text" name="studentGrade" class="form-control" placeholder="Freshman/Sophomore/Junior/Senior" required>
+    </div>
+    <div class="form-group">
+      <label for="emailAddress">Student Email Address (Please double check for any typos. An invalid email address will invalidate registration. )</label>
+      <input type="email" name="emailAddress" class="form-control" placeholder="Email Address" required>
+    </div> <!-- end .form-group -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+      <label for="studentPhoneNo">Student Phone Number  (Please check for any typos)</label>
+      <input type="text" name="studentPhoneNo" class="form-control" placeholder="(408) 555-1212" required>
+    </div>
+    <div class="form-group">
+      <label for="studentId">Student ID Number</label>
+      <input type="text" name="studentId" class="form-control" placeholder="ID" required>
+    </div>
+    <div class="form-group">
+      <label for="facebookAccount">Does the student have a Facebook account?</label>
+      <input type="text" name="facebookAccount" class="form-control" placeholder="Yes/No" required>
+    </div>
+    <div class="form-group">
+      <label for="facebookEvsd">If so, is he/she in the Speech & Debate Facebook group? (Here is the link to join: http://on.fb.me/1EcE7oz ) </label>
+      <input type="text" name="facebookEvsd" class="form-control" placeholder="Yes/No" required>
+    </div>
+    <div class="form-group">
+      <label for="schoolloopEvsd">Is the student a part of the Speech & Debate Schoolloop group? </label>
+      <input type="text" name="schoolloopEvsd" class="form-control" placeholder="Yes/No" required>
+    </div>
+
+    <h4 class="page-header">PARENT/GUARDIAN INFORMATION</h4>
+    <div class="form-group">
+      <label for="firstParent">First Parent/Guardian Full Name * (This will be the parent/guardian we will contact first if needed)</label>
+      <input type="text" name="firstParent" class="form-control" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+      <label for="firstParentPhoneNo">First Parent/Guardian Phone Number</label>
+      <input type="text" name="firstParentPhoneNo" class="form-control" placeholder="(408) 555-1212" required>
+    </div>
+    <div class="form-group">
+      <label for="firstParentEmailAddress">First Parent/Guardian Email</label>
+      <input type="email" name="firstParentEmailAddress" class="form-control" placeholder="Email Address" required>
+    </div>
+    <div class="form-group">
+      <label for="firstParentEmployer">First Parent/Guardian Employer</label>
+      <input type="text" name="firstParentEmployer" class="form-control" placeholder="abc.xyz" required>
+    </div>
+    <div class="form-group">
+      <label for="pEmployer1">We will use this information for the sole purpose of sending you your company’s donation matching policy so that it is easier for you to pursue a corporate donation matching, which is a key source of funding for EVSD. Without this donation matching, more costs will have to be shared by the students and parents. </label>
+    </div>
+    <div class="form-group">
+      <label for="secondParent">Second Parent/Guardian Full Name * (This will be the parent/guardian we will contact second if needed)</label>
+      <input type="text" name="secondParent" class="form-control" placeholder="Full Name" required>
+    </div>
+    <div class="form-group">
+      <label for="secondParentPhoneNo">Second Parent/Guardian Phone Number</label>
+      <input type="text" name="secondParentPhoneNo" class="form-control" placeholder="(408) 555-1212" required>
+    </div>
+    <div class="form-group">
+      <label for="secondParentEmailAddress">Second Parent/Guardian Email</label>
+      <input type="email" name="secondParentEmailAddress" class="form-control" placeholder="Email Address" required>
+    </div>
+    <div class="form-group">
+      <label for="secondParentEmployer">Second Parent/Guardian Employer</label>
+      <input type="text" name="secondParentEmployer" class="form-control" placeholder="abc.xyz" required>
+    </div>
+    <div class="form-group">
+      <label for="pEmployer2">We will use this information for the sole purpose of sending you your company’s donation matching policy so that it is easier for you to pursue a corporate donation matching, which is a key source of funding for EVSD. Without this donation matching, more costs will have to be shared by the students and parents. </label>
+    </div>
+
+    <h4 class="page-header">MISCELLANEOUS</h4>
+    <div class="form-group">
+      <label for="findOut">How did the student find out about EVHS Speech and Debate?</label>
+      <input type="text" name="findOut" class="form-control" placeholder="abc.xyz" required>
+    </div>
+    <div class="form-group">
+      <label for="whyjoin">Why does the student want to join EVHS Speech and Debate?</label>
+      <input type="text" name="whyjoin" class="form-control" placeholder="abc.xyz" required>
+    </div>
+    <div class="form-group">
+      <label for="concerns">Are there any concerns (including allergies, medical needs, or anything else) that we should be aware of?</label>
+      <input type="text" name="concerns" class="form-control" placeholder="abc.xyz" required>
+    </div>
+
+    <h4 class="page-header">Waiver</h4>
+    Please read the following waiver: <a href= "https://drive.google.com/file/d/0B0GF5CUxnsQPRE5Yb2NZZGV3Zmc/view" target= "_blank"> Waiver </a>
+    <br>
+    <input type = "checkbox" name = "waiver" value = "waiver"> We, the student registering and the parent/guardian registering, will fill out, sign, and submit through this website the following forms:
+    <h4 class="page-header">Payment Information</h4>
+    <label>EVSD Annual Contribution: $250 <br>
+    As reviewed in the Parent Orientation, this is the bare minimum we need to cover coaching expenses and salaries, facilities, school tournament fees, club events, financial aid & subsidies to students, league fees, professional material, and much more.
+  Most schools ask for around $400-$600, so we are trying our best to do with as little aid as possible. Please contact team administration at evhs.sd@gmail.com for questions or concerns.
+We use Paypal and Stripe software to power our payment process, which means our platform is verified and 100% safe. Because we are a registered 501c3 under California State Government and an ESUHSD Booster, your contribution is tax-deductible.</label>
+
+    <div class="form-group">
+      <br>
+      {{> Template.dynamic template="creditCard" data="signup"}}
+    </div>
+    <div class="form-group">
+      <input type="submit" id="submitBtn" class="btn btn-success btn-block" data-loading-text="Setting up your membership.." style="margin-top: 40px; margin-bottom: 20px;" value="sign me up for 2015-2016 EVHS SPEECH & DEBATE CLUB ">
+    </div> <!-- end.form-group -->
+
+    <img src="/img/stripelogo.png">
+
+  </form>
+</template>

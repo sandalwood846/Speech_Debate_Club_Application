@@ -1,0 +1,39 @@
+<head>
+
+  <!--Import Google Icon Font-->
+      <!--Import materialize.css-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+</head>
+
+
+  <template name="profile">
+    <div class="main">
+          <a href="{{pathFor route='home'}}"><i class="material-icons" style="font-size:50px; color:#e74c3c; float:right;">cancel</i></a> <br>
+           <img class="prof" src="http://www.healthsciences.vcu.edu/media/ovphs/ipe/images/profiles/placeholder-man.png">
+           <h3><span>{{currentUser.profile.firstName}}</span><span>{{currentUser.profile.lastName}}</span></h3>
+           <h5>Personal email:</h5>
+           <div class="chip" style="margin-bottom:10px;background-color:#f1c40f;color:white;">
+               {{currentUser.username}}
+           </div>
+           <h5>Parent email:</h5>
+           <div class="chip" style="margin-bottom:20px;background-color:#c0392b;color:white;">
+               {{currentUser.firstParentEmailAddress}}
+           </div>
+           <div class="chip" style="margin-bottom:20px;background-color:#2980b9;color:white;">
+               {{currentUser.secondParentEmailAddress}}
+           </div>
+           <h5>Events:</h5>
+           <div class="chip" style="margin-bottom:20px;background-color:#2980b9;color:white;">
+               Parlimentary
+           </div>
+           <div class="chip" style="margin-bottom:20px;background-color:#27ae60;color:white">
+               Original Oratory
+           </div>
+       </div>
+  </template>
+  <body>
+       <!--Import jQuery before materialize.js-->
+
+     </body>

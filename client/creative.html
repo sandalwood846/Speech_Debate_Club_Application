@@ -1,0 +1,484 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EVSD</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="client/stylesheets/vitality-dist/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Retina.js - Load first for faster HQ mobile images. -->
+    <script src="client/vitality-dist.js/plugins/retina/retina.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Default Fonts -->
+    <link href="public/fonts/Roboto.css" rel='stylesheet' type ="text/css">
+    <link href='\fonts\Raleway.zip' rel='stylesheet'>
+    <!-- Modern Style Fonts (Include these is you are using body.modern!) -->
+    <link href='\fonts\Montserrat.zip' rel='stylesheet'>
+    <link href='\fonts\Cardo.zip' rel='stylesheet'>
+    <!-- Vintage Style Fonts (Include these if you are using body.vintage!) -->
+    <link href='\fonts\Sanchez.zip' rel='stylesheet'>
+    <!-- Plugin CSS -->
+    <link href="client/stylesheets/vitality-dist/css/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="client/stylesheets/vitality-dist/css/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="client/stylesheets/vitality-dist/css/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
+    <link href="client/stylesheets/vitality-dist/css/plugins/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="client/stylesheets/vitality-dist/css/plugins/background.css" rel="stylesheet" type="text/css">
+    <link href="client/stylesheets/vitality-dist/css/plugins/animate.css" rel="stylesheet" type="text/css">
+    <!-- Vitality Theme CSS -->
+    <!-- Uncomment the color scheme you want to use. -->
+    <!-- <link href="assets/css/vitality-red.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="assets/css/vitality-aqua.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="assets/css/vitality-blue.css" rel="stylesheet" type="text/css"> -->
+    <link href="client/stylesheets/vitality-dist/css/vitality-green.css" rel="stylesheet" type="text/css">
+    <!-- <link href="assets/css/vitality-orange.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="assets/css/vitality-pink.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="assets/css/vitality-purple.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="assets/css/vitality-tan.css" rel="stylesheet" type="text/css"> -->
+    <!--<link href="client/stylesheets/vitality-dist/css/vitality-turquoise.css" rel="stylesheet" type="text/css">-->
+    <!-- <link href="assets/css/vitality-yellow.css" rel="stylesheet" type="text/css"> -->
+    <!-- IE8 support for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!-- Alternate Body Classes: .modern and .vintage -->
+
+<body id="page-top">
+</body>
+<template name = "home">
+    <!-- Navigation -->
+    <!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                  <!--  <li>
+                        <a class="page-scroll" href="#about">What We Do</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Who We Are</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info">About Speech and Debate</a>
+                    </li>
+					{{#if currentUser}}
+                    <li>
+                        <a class="page-scroll" href="{{pathFor route='memberprofile'}}">Member Profile</a>
+                    </li>
+					{{/if}}-->
+                    {{#if currentUser}}
+                      <li>
+                        <a> {{currentUser.username}}</a>
+                      </li>
+                      <li>
+                        <a href="{{pathFor route='profile'}}"> Profile</a>
+                      </li>
+                      <li>
+                        <a href="{{pathFor route='logout'}}"> Logout</a>
+                      </li>
+                    {{else}}
+                    <li>
+                       <a class="page-scroll" href="{{pathFor route='signup'}}">Sign Up</a>
+                    </li>
+                    <li>
+                       <a class="page-scroll" href="{{pathFor route='login'}}">Log In</a>
+                    </li>
+                    {{/if}}
+              <!--    {{#if currentUser}}
+                    <li>
+                      {{user.profile.name}}
+                    </li>
+                    {{/if}}-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <header style="background-image: url('/img/microphone.jpg');">
+        <div class="intro-content">
+            <div style="margin-top: -40px;" class="brand-name">EVSD</div>
+            <hr class="colored">
+            <div style="margin-top: 20px;" class="brand-name-subtext">Evergreen Valley Speech and Debate</div>
+            <div style="margin-top: 400px;" class="brand-name-subtext">An elite training ground for the art of the spoken word.</div>
+        </div>
+      <!--  <div class="scroll-down">
+            <a class="btn page-scroll" href="#about"><i class="fa fa-angle-down fa-fw"></i></a>
+        </div>-->
+    </header>
+  <!--<section id="about" class="bg-gray">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-lg-12 wow fadeIn">
+                    <h1>This is what we do</h1>
+                    <p>Throughout the course of history, words have been some of the most powerful agents of change. Words have the power to change people's thoughts, actions, and most importantly, their hearts.
+
+
+
+Welcome to Evergreen Valley High School Speech & Debate, one of the most successful Speech & Debate programs in the nation.</p>
+                    <hr class="colored">
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside id = "services" class="cta-quote" style="background-image: url('/img/creative/suits.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 wow fadeIn">
+                    <span class="quote">An
+                        <span class="text-primary">elite</span> training ground for the
+                    <span class="text-primary">art</span> of the
+                    <span class="text-primary">spoken word</span>.</span>
+                    <hr class=" colored">
+                    <a class="btn btn-outline-light page-scroll" href="#info">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <section id = "info" class="testimonials bg-gray">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="testimonials-carousel">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p class="lead">“As a college professor, I note that my top students are most often former high school debaters who actively participate in class discussions and articulate persuasive arguments both in class and on written assignments.” </p>
+                                    <hr class="colored">
+                                    <p class="quote">Colleges love Speech & Debate. Our entire graduating class of 2014 got into UC Berkeley!</p>
+                                    <div class="testimonial-info">
+                                        <div class="testimonial-author">
+                                            <span class="name">Professor Minh A. Luong </span>
+                                            <p class="small"> Yale University</p>
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p class="lead">"State and national award winners have a 22% to 30% higher acceptance rate at top tier colleges."</p>
+                                    <hr class="colored">
+                                    <p class="quote">Employers found that the ability to communicate effectively is the quality employers most want to see in new recruits.</p>
+                                    <div class="testimonial-info">
+
+                                        <div class="testimonial-author">
+                                            <span class="name">Wall Street Journal</span>
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+  <!-- <footer class="footer" style="background-image: url('/img/bg-footer.jpg')">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 contact-details">
+                    <p>evhs.sd@gmail.com
+                    <h4><i class="fa fa-envelope"></i> Email</h4>
+                    </p>
+                </div>
+            </div>
+            <div class="row social">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                    </ul>
+                </div>
+            </div>
+            <div class="row copyright">
+            </div>
+        </div>
+    </footer>-->
+    <!-- Portfolio Modals -->
+    <!-- Example Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('/img/creative/portfolio/bg-1.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2015</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Example Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('/img/creative/portfolio/bg-2.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2015</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Example Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('/img/creative/portfolio/bg-3.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="/img/client-logos/logo-1.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="/img/portfolio/mobile-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Example Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" style="background-image: url('/img/creative/portfolio/bg-4.jpg')">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <img src="/img/client-logos/logo-2.png" class="img-responsive img-centered" alt="">
+                            <h2>Project Title</h2>
+                            <hr class="colored">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi in tenetur vero voluptatum sapiente dolores eligendi nemo iste ea. Omnis, odio enim sint quam dolorum dolorem. Nostrum, minus, ad.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <img src="/img/portfolio/tablet-screens.png" class="img-responsive img-centered" alt="">
+                        </div>
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2015</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Core Scripts -->
+    <script src="client/vitality-dist.js/jquery.js"></script>
+    <script src="client/vitality-dist.js/bootstrap/bootstrap.min.js"></script>
+    <!-- Plugin Scripts -->
+    <script src="client/vitality-dist.js/plugins/jquery.easing.min.js"></script>
+    <script src="client/vitality-dist.js/plugins/classie.js"></script>
+    <script src="client/vitality-dist.js/plugins/cbpAnimatedHeader.js"></script>
+    <script src="client/vitality-dist.js/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="client/vitality-dist.js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="client/vitality-dist.js/plugins/background/core.js"></script>
+    <script src="client/vitality-dist.js/plugins/background/transition.js"></script>
+    <script src="client/vitality-dist.js/plugins/background/background.js"></script>
+    <script src="client/vitality-dist.js/plugins/jquery.mixitup.js"></script>
+    <script src="client/vitality-dist.js/plugins/wow/wow.min.js"></script>
+    <script src="client/vitality-dist.js/contact_me.js"></script>
+    <script src="client/vitality-dist.js/plugins/jqBootstrapValidation.js"></script>
+    <!-- Vitality Theme Scripts -->
+    <script src="client/vitality-dist.js/vitality.js"></script>
+</template>
+<template name = "waiver">
+<embed src = "waiver.pdf" height= "2100px" width="800px">
+</template>
+<!--<template name = "whyjoin">
+  <section id="about">
+       <div class="container wow fadeIn">
+   <center><h1>Why Join?</h1></center>
+           <div class="row">
+               <div class="col-md-4 text-center">
+                   <h3>Real World Education</h3>
+                   <hr class="colored">
+                   Speech and debate teaches fudnamental lessons that are absolutely essential for success in the exceedingly competitive 21st century.
+                   <br>
+                   <ol class = "prof">
+                     <li>1. CONFIDENCE: Speech and Debate teaches confidence and eloquence in presenting oneself to the world. Whether it be for a job/college interview, a presentation, or day to day communication, this activity embeds confidence within all of its participants. </li>
+                     <br>
+
+                      <li>2. COMMUNICATION: Speech and Debate is the art of communication. Studies have shown that students who participate in Speech and Debate come out better able to express their viewpoints effectively, connect with others, and persuade others, leading to more succcessful lives.  </li>
+                    <li>
+                    </li>
+                  <li>
+                  </li>
+                  <li>
+                  </li>
+                   </ol>
+               </div>
+
+               <div class="col-md-4 text-center">
+                  <h3>Academics </h3>
+                   <hr class="colored">
+               </div>
+
+               <div class="col-md-4 text-center">
+                  <h4>Fun</h4>
+                   <hr class="colored">
+               </div>
+
+
+           </div>
+       </div>
+   </section>
+</template>-->
+<template name = "memberprofile">
+{{#if currentUser.profile.member}}
+	 <section id="about">
+        <div class="container wow fadeIn">
+		<center><h1>Member Profile </h1></center>
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <h2>{{#each user}} {{username}}{{/each}}</h2>
+                    <hr class="colored">
+                    <ul class = "prof">
+					{{#each user}}
+					<li> Name: {{username}}</li>
+					<li> Parent Email: {{profile.parentemail}} </li>
+					<li> Email: {{emails.[0].address}}</li>
+					{{/each}}
+					</ul>
+                </div>
+				{{#if currentUser.profile.notuploaded}}
+                <div class="col-md-6">
+                   <h2> Upload a File </h2>
+					<input type = "file" id = "file-upload"/>
+                </div>
+				{{/if}}
+				<div>
+					<h2> {{currentUser.profile.pdfname}} </h2>
+					<embed src="{{currentUser.profile.base64}}" width="400px" height="1050px">
+				</div>
+            </div>
+        </div>
+    </section>
+{{/if}}
+</template>
+<!--<template name = "signup">
+  <button>Pay with Stripe</button>
+</template>-->
+<template name = "error">
+  Error Completing Signup.
+</template>
